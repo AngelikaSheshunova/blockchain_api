@@ -41,7 +41,7 @@ if (is_array($input) && isset($input["ignore_possible_matches"]))
 }
 unset($input["ignore_possible_matches"]);
 
-$result = VChainIdentity::record($input, $key, $using_cause, $ip, $ignore_possible_matches);
+$result = VChainIdentity::recordUsage($input, $key, $using_cause, $ip, $ignore_possible_matches);
 
 echo json_encode($result, true);
 
