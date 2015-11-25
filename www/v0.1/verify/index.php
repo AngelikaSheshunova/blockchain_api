@@ -59,6 +59,9 @@ $data = $input["data"];
 
 $result = VChainVerification::addVerifications($data, $key, $signature, $verifications_signatures, $ip);
 
+unset($result["restrictions"]);
+unset($result["identities"]);
+
 echo json_encode($result, true);
 
 ?>

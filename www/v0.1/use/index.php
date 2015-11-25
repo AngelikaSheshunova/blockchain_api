@@ -43,6 +43,9 @@ unset($input["ignore_possible_matches"]);
 
 $result = VChainIdentity::recordUsage($input, $key, $using_cause, $ip, $ignore_possible_matches);
 
+unset($result["restrictions"]);
+unset($result["identities"]);
+
 echo json_encode($result, true);
 
 ?>
