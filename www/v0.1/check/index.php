@@ -32,8 +32,6 @@ $result = VChainIdentity::check($input, $key, $ip);
 unset($result["restrictions"]);
 unset($result["identities"]);
 
-error_log(print_r($result, true));
-
 echo json_encode($result, true);
 
 ?>
